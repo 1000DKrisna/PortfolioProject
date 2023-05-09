@@ -30,7 +30,7 @@ ORDER BY 1,2
 
 -- Looking at Countries with Highest Infection Rate compare to Population
 SELECT Location, Population, MAX(total_cases) AS HighestInfectedCount, 
-							 MAX ((total_cases/population))* 100 AS PercentagePopulationInfected
+				MAX ((total_cases/population))* 100 AS PercentagePopulationInfected
 FROM MyPortfolio..CovidDeaths
 WHERE continent IS NOT NULL
 GROUP BY location, population
